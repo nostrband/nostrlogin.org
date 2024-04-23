@@ -73,7 +73,7 @@ But what Nostr event should your app sign? What are those `kind`, `tags` and `co
 
 Well, ideally you would design your app's data model around Nostr events. Nostr events have `kind`, which is a number you would use to indicate the data type. You would store the data that users produce in a form of signed Nostr events, which would make it all tamper-proof. You could event store all that data on the Nostr relays...
 
-That would be an actual *Nostr app*. You'd need to learn [how the Nostr protocol works](https://github.com/nostr-protocol/nips/blob/master/01.md), and learn to structure your data as Nostr events from [existing event kinds](https://github.com/nostr-protocol/nips/tree/master#event-kinds). 
+That would be an actual *Nostr app*. You'd need to learn [how the Nostr protocol works](https://github.com/nostr-protocol/nips/blob/master/01.md), and learn to structure your data as Nostr events by studying [existing event kinds](https://github.com/nostr-protocol/nips/tree/master#event-kinds). 
 
 However, you don't have to go that far.
 
