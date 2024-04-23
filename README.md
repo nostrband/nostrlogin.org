@@ -105,4 +105,6 @@ Second, take a look at [nostr-tools](https://github.com/nbd-wtf/nostr-tools/) an
 
 For native apps, checkout [awesome-nostr](https://github.com/aljazceru/awesome-nostr) or just run a github search for `nostr` + your language. Thousands of tools are already out there, you'll certainly find something useful for your particular needs. 
 
+## Still have questions?
 
+Submit an [issue](https://github.com/nostrband/nostrlogin.org/issues) for this page, we will do our best to figure things out for you.
