@@ -85,6 +85,18 @@ There is a [standard](https://github.com/nostr-protocol/nips/blob/master/98.md) 
 
 Check out the examples for the client and the server. TBD
 
+## How to authenticate using Nostr DMs? 
+
+For some apps it might be too hard to arrange a continuous access to Nostr keys for users. For instance, if you're building a native app, you'd either have to implement *Nostr Connect*, which might be quite complex, or you would just ask users for their private key and learn how to handle it safely (hint: don't do that!).
+
+In this case you could use [Nostr encrypted direct messages](https://github.com/nostr-protocol/nips/blob/master/04.md) for authentication.
+
+Ask users for their public key (usually in the [`npub`](https://github.com/nostr-protocol/nips/blob/master/19.md) form), then send them a Nostr DM with a one-time code. Users could use any Nostr app that supports DMs to read the one-time code. If they enter the correct code back into your app, you can be sure they have access to the keys for the provided public key.
+
+Your implementation would probably involve a database table of public keys and the matching one-time codes, with codes expiring after several minutes. You will also need to generate Nostr keys for your app, store them on your server and use them to sign and encrypt the DMs with one-time codes. You'll also need to learn to talk to relays, and to discover relays that the target user is reading from...
+
+This is not a trivial option, but sometimes there's just no better way.
+
 ## What about the libraries?
 
 First, we recommend you to try [`nostr-login`](https://github.com/nostrband/nostr-login) as the `window.nostr` provider. Just add `https://www.unpkg.com/nostr-login@latest/dist/unpkg.js` script into your html page and get a powerful UI for various Nostr key access methods (extensions, Nostr Connect, read-only), account switching, etc. Another option is [`window.nostr.js`](https://github.com/fiatjaf/window.nostr.js).
