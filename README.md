@@ -26,7 +26,7 @@ There are different providers of the `window.nostr` interface.
 
 Users could install a browser extension, which would inject the `window.nostr` object into all browser tabs. That's a convenient solution for existing Nostr users, but it's quite hard to onboard new users into your app if you're instructing them to *install a browser extension*...
 
-Another way to access Nostr keys is [Nostr Connect](https://github.com/nostr-protocol/nips/blob/master/46.md). It's a remote key access protocol using Nostr relays to communicate with a key storage app, and it can be used by both web and native apps.
+Another way to access Nostr keys is [Nostr Connect](https://github.com/nostr-protocol/nips/blob/master/46.md). It's a remote key access protocol using Nostr relays to communicate with a key storage app, and it can be used by both web and native apps. It also has OAuth-like flows specified for login and sign up, which makes it a familiar way for users to provide access to their identity.
 
 Nostr Connect is not trivial to implement, but luckily - you don't have to. There are several libraries you can use for remote key access. Some of those libraries would even provide a `window.nostr` interface for you, and will forward your `window.nostr` calls to the remote key storage app.
 
