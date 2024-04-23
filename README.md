@@ -1,6 +1,14 @@
 # Why Nostr Login?
 
-Were you looking for a cryptographic identity system for your app or website? 
+Why not your own database of emails and passwords? Why not a big provider like Google/Facebook/Twitter?
+
+Both options have issues. 
+
+Your own identity system is an empty database, no data, no social graph. 
+
+A big provider may reduce friction for users, and might give you access to their data. But what if provider turns your app off? What if it starts charging for the data access?
+
+So maybe you're looking for a permissionless identity provider that has a social graph, or has data to train your AIs, or could help your app go viral...
 
 Nostr might be the answer!
 
