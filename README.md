@@ -20,7 +20,7 @@ Nostr keys can be used to log into your app, to get tamper-proof data signed by 
 
 Nostr keys are usually stored in browser extensions or in specialized key storage apps. 
 
-The simplest way for web apps to access Nostr keys in a browser is using the [`window.nostr`](https://github.com/nostr-protocol/nips/blob/master/07.md) JavaScript object. It is a standard interface for Nostr key access, and has methods to get the user's public key, to sign Nostr events, to encrypt and decrypt data.
+The simplest way for web apps to access Nostr keys in a browser is using the [window.nostr](https://github.com/nostr-protocol/nips/blob/master/07.md) JavaScript object. It is a standard interface for Nostr key access, and has methods to get the user's public key, to sign Nostr events, to encrypt and decrypt data.
 
 The provider of the `window.nostr` interface may differ.
 
@@ -91,7 +91,7 @@ For some apps it might be too hard to arrange a continuous access to Nostr keys 
 
 In this case you could use [Nostr encrypted direct messages](https://github.com/nostr-protocol/nips/blob/master/04.md) for authentication.
 
-Ask users for their public key (usually in the [`npub`](https://github.com/nostr-protocol/nips/blob/master/19.md) form), then send them a Nostr DM with a one-time code. Users could use any Nostr app that supports DMs to read the one-time code. If they enter the correct code back into your app, you can be sure they have access to the keys for the provided public key.
+Ask users for their public key (usually in the [npub](https://github.com/nostr-protocol/nips/blob/master/19.md) form), then send them a Nostr DM with a one-time code. Users could use any Nostr app that supports DMs to read the one-time code. If they enter the correct code back into your app, you can be sure they have access to the keys for the provided public key.
 
 Your implementation would probably involve a database table of public keys and the matching one-time codes, with codes expiring after several minutes. You will also need to generate Nostr keys for your app, store them on your server and use them to sign and encrypt the DMs with one-time codes. You'll also need to learn to talk to relays, and to discover relays that the target user is reading from...
 
@@ -99,9 +99,9 @@ This is not a trivial option, but sometimes there's just no better way.
 
 ## What about the libraries?
 
-First, we recommend you to try [`nostr-login`](https://github.com/nostrband/nostr-login) as the `window.nostr` provider. Just add `https://www.unpkg.com/nostr-login@latest/dist/unpkg.js` script into your html page and get a powerful UI for various Nostr key access methods (extensions, Nostr Connect, read-only), account switching, etc. Another option is [`window.nostr.js`](https://github.com/fiatjaf/window.nostr.js).
+First, we recommend you to try [nostr-login](https://github.com/nostrband/nostr-login) as the `window.nostr` provider. Just add `https://www.unpkg.com/nostr-login@latest/dist/unpkg.js` script into your html page and get a powerful UI for various Nostr key access methods (extensions, Nostr Connect, read-only), account switching, etc. Another option is [window.nostr.js](https://github.com/fiatjaf/window.nostr.js).
 
-Second, take a look at [`nostr-tools`](https://github.com/nbd-wtf/nostr-tools/) and [`NDK`](https://github.com/nostr-dev-kit/ndk). The first one is a lower-level tool - verify signatures, generate keys, format events, talk to a relay, etc. The second one is higher-level, with sophisticated relay communication logic, Nostr Connect implementation, and other powerful tools.
+Second, take a look at [nostr-tools](https://github.com/nbd-wtf/nostr-tools/) and [NDK](https://github.com/nostr-dev-kit/ndk). The first one is a lower-level tool - verify signatures, generate keys, format events, talk to a relay, etc. The second one is higher-level, with sophisticated relay communication logic, Nostr Connect implementation, and other powerful tools.
 
 For native apps, checkout [awesome-nostr](https://github.com/aljazceru/awesome-nostr) or just run a github search for `nostr` + your language. Thousands of tools are already out there, you'll certainly find something useful for your particular needs. 
 
