@@ -63,7 +63,7 @@ The way to go is to get the user to actually *sign some Nostr event*. If they pr
 ```
 const signedEvent = await window.nostr.signEvent({
  kind: 12345, // event kind 
- created_at: Date.now() / 1000, // event timestamp
+ created_at: Math.floor(Date.now() / 1000), // event timestamp
  tags: [],    // event tags
  content: ''  // event content
 });
