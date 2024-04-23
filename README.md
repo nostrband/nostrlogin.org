@@ -22,7 +22,7 @@ Nostr keys are usually stored in browser extensions or in specialized key storag
 
 The simplest way for web apps to access Nostr keys in a browser is using the [window.nostr](https://github.com/nostr-protocol/nips/blob/master/07.md) JavaScript object. It is a standard interface for Nostr key access, and has methods to get the user's public key, to sign Nostr events, to encrypt and decrypt data.
 
-The provider of the `window.nostr` interface may differ.
+There are different providers of the `window.nostr` interface.
 
 Users could install a browser extension, which would inject the `window.nostr` object into all browser tabs. That's a convenient solution for existing Nostr users, but it's quite hard to onboard new users into your app if you're instructing them to *install a browser extension*...
 
