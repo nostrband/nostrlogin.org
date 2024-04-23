@@ -99,7 +99,7 @@ This is not a trivial option, but sometimes there's just no better way.
 
 ## What about the libraries?
 
-First, we recommend you to try [nostr-login](https://github.com/nostrband/nostr-login) as the `window.nostr` provider. Just add `https://www.unpkg.com/nostr-login@latest/dist/unpkg.js` script into your html page and get a powerful UI for various Nostr key access methods (extensions, Nostr Connect, read-only), account switching, etc. Another option is [window.nostr.js](https://github.com/fiatjaf/window.nostr.js).
+First, we recommend you to try [nostr-login](https://github.com/nostrband/nostr-login) as the `window.nostr` provider. Just add `https://www.unpkg.com/nostr-login@latest/dist/unpkg.js` script into your html page and get a powerful UI for various Nostr key access methods (extensions, Nostr Connect, read-only, account switching, etc). Another option is [window.nostr.js](https://github.com/fiatjaf/window.nostr.js).
 
 Second, take a look at [nostr-tools](https://github.com/nbd-wtf/nostr-tools/) and [NDK](https://github.com/nostr-dev-kit/ndk). The first one is a lower-level tool - verify signatures, generate keys, format events, talk to a relay, etc. The second one is higher-level, with sophisticated relay communication logic, Nostr Connect implementation, and other powerful tools.
 
