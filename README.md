@@ -34,7 +34,7 @@ Nostr Connect is not trivial to implement, but luckily - you don't have to. Ther
 
 Let's start integrating Nostr into your web app.
 
-First, install [one of the browser extensions](https://github.com/aljazceru/awesome-nostr#nip-07-browser-extensions) for Nostr key storage (start with [nos2x](https://chromewebstore.google.com/detail/nos2x/kpgefcfmnafjgpblomihpgmejjdanjjp) or [Nostore](https://apps.apple.com/us/app/nostore/id1666553677)).
+First, install [one of the browser extensions](https://github.com/aljazceru/awesome-nostr#nip-07-browser-extensions) for Nostr key storage (start with [nos2x](https://chromewebstore.google.com/detail/nos2x/kpgefcfmnafjgpblomihpgmejjdanjjp) or [Nostore](https://apps.apple.com/us/app/nostore/id1666553677)). You'll be using it for testing.
 
 Second, ask for the user's public key in your web app:
 
